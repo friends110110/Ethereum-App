@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/ethe_transfer"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="以太币转账"/>
+
+        <item
+                android:id="@+id/nav_product_suggest"
+                android:icon="@drawable/ic_menu_more"
+                android:title="产品推荐"/>
+        <item
+                android:id="@+id/nav_manage"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="设置"/>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="分享"/>
+            <item
+                    android:id="@+id/nav_about"
+                    android:icon="@drawable/ic_menu_info"
+                    android:title="关于"/>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_settings"
+          android:title="@string/action_settings"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+
+    <item android:id="@+id/action_qr_scan"
+          android:title="@string/qr_scan"
+          android:orderInCategory="100"
+          android:icon="@mipmap/ic_launcher"
+          app:showAsAction="ifRoom"
+          />
+    <item android:id="@+id/action_generate_qr"
+          android:title="@string/generate_qr_tips"
+          android:orderInCategory="100"
+          app:showAsAction="never"
+    />
+</menu>

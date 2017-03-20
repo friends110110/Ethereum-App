@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="minLines">4</integer>
+    <integer name="maxLines">10</integer>
+</resources>

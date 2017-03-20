@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">CodeCompeteApplication</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_v3_str">请复制v3格式的钱包并长按黏贴剪贴板</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_create_new_wallet">还没有钱包？那么创建新钱包</string>
+
+    <string name="action_login_my_wallet">登录我的钱包</string>
+    <string name="action_restore_wallet">从备份恢复钱包</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_v3str">v3文件格式无效</string>
+    <string name="error_invalid_password">密码无效</string>
+    <string name="error_field_v3_required">请输入v3格式文件</string>
+    <string name="error_field_passwd_required">请输入密码</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="prompt_enter_secret">请输入密码</string>
+    <string name="ok">确定</string>
+    <string name="quit_create_secret">放弃创建密码</string>
+    <string name="error_incorrect_password">密码错误</string>
+    <string name="fail_create_wallet_tips">创建钱包失败</string>
+    <string name="success_create_wallet_tips">成功创建了钱包</string>
+    <string name="success_login_wallet_tips">成功登陆钱包</string>
+    <string name="title_login">请登录钱包</string>
+    <string name="please_login_tips">请登录</string>
+
+    <string name="please_login_first_tips">请先登录再查看</string>
+    <string name="person_info">个人信息</string>
+
+    <string name="action_ethe_transfer">以太币转账</string>
+    <string name="ethe_transfer_label">以太币转账</string>
+    <string name="qr_scan">二维码扫描</string>
+
+
+    <string name="fail_to_send_transaction_tips">以太币转账失败</string>
+    <string name="send_transaction_tips">以太币转账指令已发出，稍后查看明细</string>
+    <string name="cancel">取消</string>
+    <string name="action_login_out_tips">注销</string>
+    <string name="login_out_tip">注销</string>
+    <string name="login_out_user_tip">注销该用户</string>
+    <string name="a_u_sure_tip">您确定吗？</string>
+    <string name="select_from_album">从相册选择</string>
+    <string name="generate_qr_tips">生成二维码</string>
+    <string name="generate_qr">生成二维码</string>
+    <string name="change_person_info_tips">个人信息修改</string>
+
+</resources>

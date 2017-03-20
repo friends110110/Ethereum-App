@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="transferViewModel"
+            type="com.hundsun.codecompete.ethetransfer.EtheTransferViewModel"
+        />
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            tools:context="com.hundsun.codecompete.ethetransfer.EtheTransferActivity">
+
+
+        <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                app:behavior_overlapTop="69dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                        android:id="@+id/people_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/spacing_large"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="4dp"
+                        app:contentPaddingBottom="16dp"
+                        app:contentPaddingLeft="16dp"
+                        app:contentPaddingRight="16dp"
+                        app:contentPaddingTop="16dp"
+                >
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                    >
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:id="@+id/tv_from_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="from address:"
+                            />
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="14dp"
+                                android:layout_marginBottom="14dp"
+                                android:layout_marginLeft="14dp"
+                                android:layout_marginStart="14dp"
+                                android:enabled="false"
+                                android:layout_below="@+id/tv_from_address"
+                                android:text="@{transferViewModel.session.address}"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:id="@+id/tv_to_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="to address:"
+                            />
+
+                            <EditText
+                                    android:id="@+id/et_to_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="14dp"
+                                    android:layout_marginLeft="14dp"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_below="@id/tv_to_address"
+                                    android:hint="000000.."
+                                    android:digits="0123456789abcdef"
+                                    android:textColorHint="@color/hint_color"
+                                    android:text="@{transferViewModel.toAddress}"
+                            />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_large"
+                        android:layout_marginLeft="@dimen/spacing_large"
+                        android:layout_marginRight="@dimen/spacing_large"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="4dp"
+                        app:contentPaddingBottom="16dp"
+                        app:contentPaddingLeft="16dp"
+                        app:contentPaddingRight="16dp"
+                        app:contentPaddingTop="16dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium">
+
+                            <TextView
+                                    android:id="@+id/tv_ethe_coin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="以太币:   "/>
+
+                            <EditText
+                                    android:id="@+id/et_type_in_ethe_coin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:inputType="number|numberDecimal"
+                                    android:digits="0123456789."
+                                    android:layout_marginStart="14dp"
+                                    android:layout_marginLeft="14dp"
+                                    android:layout_toEndOf="@+id/tv_ethe_coin"
+                                    android:layout_toRightOf="@+id/tv_ethe_coin"
+                                    android:hint="@{transferViewModel.session.etheCoin}"
+                                    android:textColorHint="@color/hint_color"
+                                    android:text="@{transferViewModel.typeInEtheCoin}"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium">
+
+                            <TextView
+                                    android:id="@+id/tv_vote_coin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="投票币:   "/>
+
+                            <EditText
+                                    android:id="@+id/et_vote_coin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="14dp"
+                                    android:layout_marginLeft="14dp"
+                                    android:layout_toEndOf="@+id/tv_vote_coin"
+                                    android:layout_toRightOf="@+id/tv_vote_coin"
+                                    android:textColorHint="@color/hint_color"
+                                    android:hint="0"
+                                    android:text="@{transferViewModel.session.hsCoin}"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium">
+
+                            <TextView
+                                    android:id="@+id/tv_data"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="携带数据:"/>
+
+                            <EditText
+                                    android:id="@+id/et_data"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="14dp"
+                                    android:layout_marginLeft="14dp"
+                                    android:layout_toEndOf="@+id/tv_data"
+                                    android:layout_toRightOf="@+id/tv_data"
+                                    android:lines="2"
+                                    android:text="@{transferViewModel.data}"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <Button
+                        android:id="@+id/ethe_transfer_btn"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_ethe_transfer"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp"
+                />
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
+</layout>
